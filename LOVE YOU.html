@@ -3,89 +3,62 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Carta de Amor</title>
+  <title>Corazón de Palabras</title>
   <style>
     body {
-      margin: 0;
-      background: #ffe6e6;
+      background-color: #fff0f5;
+      color: #b30059;
       font-family: 'Segoe UI', sans-serif;
       display: flex;
       justify-content: center;
       align-items: center;
+      flex-direction: column;
       height: 100vh;
-      overflow: hidden;
-    }
-
-    .container {
       text-align: center;
     }
 
-    .envelope {
-      position: relative;
-      width: 200px;
-      height: 150px;
-      background: #d6336c;
-      cursor: pointer;
-      margin: auto;
-      border-radius: 5px;
-      overflow: hidden;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-      transition: transform 0.3s ease;
+    .heart {
+      font-size: 10px;
+      line-height: 10px;
+      white-space: pre;
+      font-family: monospace;
+      color: #ff4d88;
+      margin-bottom: 30px;
     }
 
-    .flap {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 200px;
-      height: 100px;
-      background: #ff6f91;
-      clip-path: polygon(0 0, 100% 0, 50% 100%);
-      transform-origin: top;
-      transition: transform 0.5s ease;
-    }
-
-    .letter {
-      display: none;
-      margin-top: 30px;
-      font-size: 1.2em;
-      color: #800000;
-      background: #fff0f5;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-    }
-
-    .open .flap {
-      transform: rotateX(-120deg);
-    }
-
-    .open .letter {
-      display: block;
-      animation: fadeIn 1s ease forwards;
+    .message {
+      font-size: 24px;
+      font-weight: bold;
+      color: #cc0066;
+      animation: fadeIn 2s ease-in-out;
     }
 
     @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
+      from { opacity: 0; transform: translateY(10px); }
       to { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
 <body>
-  <div class="container" onclick="openEnvelope()">
-    <div class="envelope" id="envelope">
-      <div class="flap"></div>
-    </div>
-    <div class="letter" id="letter">
-      🌹 Mi amor, cada día contigo es un regalo que atesoro con todo mi corazón. Te amo. 💌
-    </div>
+  <div class="heart">
+<pre>
+       amor  amor  amor
+     amor       amor   amor
+   amor           amor    amor
+  amor             amor    amor
+ amor               amor    amor
+ amor               amor    amor
+  amor             amor   amor
+   amor           amor  amor
+     amor       amor amor
+       amor  amor  amor
+         amor amor
+           amor
+</pre>
   </div>
-
-  <script>
-    function openEnvelope() {
-      document.getElementById('envelope').classList.add('open');
-      document.getElementById('letter').classList.add('open');
-    }
-  </script>
+  <div class="message">
+    Te amo mi reyna hermosa 💖
+  </div>
 </body>
 </html>
+
